@@ -10,4 +10,4 @@ app = Flask(__name__)
 register_blueprints(app)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=int(os.environ.get("PORT", 8000)))
+    app.run(debug=False, port=int(os.environ.get("PORT", 8000)))

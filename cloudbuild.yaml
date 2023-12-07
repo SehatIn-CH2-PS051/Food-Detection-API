@@ -4,6 +4,8 @@ steps:
     args: ['build', '-t',
            'asia-southeast2-docker.pkg.dev/sehatin-406505/sehatin-api/sehatin-food-detection-api',
            '.']
+    options:
+      logging: CLOUD_LOGGING_ONLY
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
