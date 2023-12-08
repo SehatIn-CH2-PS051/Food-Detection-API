@@ -17,9 +17,8 @@ def predict():
         # img = Image.open(BytesIO(photo_decoded))
 
         # Perform inference
-        with torch.no_grad():
-            output = model.predict(photo_base64, conf=0.3, imgsz=720)
-            names = model.names
+        output = model.predict(photo_base64, conf=0.3, imgsz=720)
+        names = model.names
 
         # Process the output as needed
         detected_objects = {}
