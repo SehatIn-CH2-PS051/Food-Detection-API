@@ -18,7 +18,7 @@ def predict():
 
         # Perform inference
         with torch.no_grad():
-            output = model.predict(photo_base64, conf=0.3,imgsz=720)
+            output = model.predict(photo_base64, conf=0.3, imgsz=720)
             names = model.names
 
         # Process the output as needed
@@ -32,6 +32,6 @@ def predict():
         # Convert the detected_objects dictionary to the desired format
         formatted_detected_objects = [{"food_name": key, "count": value} for key, value in detected_objects.items()]
 
-        return jsonify({"detected_objects": formatted_detected_objects,})
+        return jsonify({"detected_objects": formatted_detected_objects, })
 
     return jsonify({"error": "No photo_base64 provided"}), 400

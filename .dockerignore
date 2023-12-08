@@ -3,5 +3,4 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 .env
-.idea
-venv
+
