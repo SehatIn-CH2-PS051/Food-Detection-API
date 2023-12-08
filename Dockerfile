@@ -21,7 +21,7 @@ RUN apt update && \
     apt install -y htop libgl1-mesa-glx libglib2.0-0
 RUN pip install --no-cache-dir -r requirements.txt
 RUN #sudo fuser -k 5000/tcp
-EXPOSE $PORT
+EXPOSE 5000
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
 # For environments with multiple CPU cores, increase the number of workers
