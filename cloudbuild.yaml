@@ -22,6 +22,8 @@ steps:
         "asia-southeast2",
         "--platform",
         "managed",
+        "--port"
+        "5000"
         "--allow-unauthenticated",
       ]
 options:
